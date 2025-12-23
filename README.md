@@ -4,6 +4,9 @@ PersonaAI is a multi-mode AI assistant that dynamically adapts its responses bas
 It offers distinct AI personas for chatting, content creation, studying, and writing — all within a single, intuitive web interface.
 The project focuses on practical AI usability, clean UI design, and real-world features such as chat export, summaries, and session control.
 
+🔗 Live Demo
+👉 https://personaai-chtpem4pzfwi9ot8aif7wm.streamlit.app/
+
 🚀 Key Features
 Multi-Mode AI Interaction : 
 💬 Chat Mode – Friendly, casual conversations for general use
