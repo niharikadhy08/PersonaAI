@@ -7,6 +7,18 @@ The project focuses on practical AI usability, clean UI design, and real-world f
 🔗 Live Demo
 👉 https://personaai-chtpem4pzfwi9ot8aif7wm.streamlit.app/
 
+📸 Application Preview
+Chat Mode
+![Chat Mode](screenshots/chat_mode.png)
+Creator Mode
+![Creator Mode](screenshots/creator_mode.png)
+Study Mode
+![Study Mode](screenshots/study_mode.png)
+Writer Mode
+![Writer Mode](screenshots/writer_mode.png)
+Content Ideas
+![Content Ideas](screenshots/content_ideas.png)
+
 🚀 Key Features
 Multi-Mode AI Interaction : 
 💬 Chat Mode – Friendly, casual conversations for general use
