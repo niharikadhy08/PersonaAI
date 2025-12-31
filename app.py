@@ -1,20 +1,13 @@
-# to run -> streamlit run app.py
-# to open terminal press -> ctrl + ~
-
 import streamlit as st
 from openai import OpenAI
 from dotenv import load_dotenv
 import os
 import textwrap
 
-# PDF imports
 from io import BytesIO
 from reportlab.lib.pagesizes import A4
 from reportlab.pdfgen import canvas
 
-# -----------------------------
-# Load environment variables
-# -----------------------------
 load_dotenv()
 
 client = OpenAI(
@@ -22,23 +15,16 @@ client = OpenAI(
     base_url="https://api.groq.com/openai/v1"
 )
 
-# -----------------------------
-# Page Config
-# -----------------------------
 st.set_page_config(
     page_title="PersonaAI",
     page_icon="֎",
     layout="wide"
 )
 
-# -----------------------------
-# App Title
-# -----------------------------
+
 st.title("֎ PersonaAI")
 
-# -----------------------------
-# Initialize chat memory (PER MODE)
-# -----------------------------
+
 if "messages" not in st.session_state:
     st.session_state.messages = {
         "💬 Chat": [],
@@ -47,11 +33,8 @@ if "messages" not in st.session_state:
         "✍️ Writer": []
     }
 
-# =====================================================
-# 🔹 SIDEBAR
-# =====================================================
+
 with st.sidebar:
-    # ---------------- AI MODE ----------------
     st.header("🧠 AI Mode")
 
     ai_mode = st.radio(
@@ -61,7 +44,6 @@ with st.sidebar:
 
     st.divider()
 
-    # ---------------- CONTENT IDEAS ----------------
     st.header("📸 Content Ideas")
 
     topic = st.text_input(
@@ -94,9 +76,6 @@ with st.sidebar:
 
     st.divider()
 
-    # =================================================
-    # 📄 EXPORT FUNCTIONS
-    # =================================================
     def export_chat_txt():
         chat = st.session_state.messages[ai_mode]
         if not chat:
@@ -152,7 +131,6 @@ with st.sidebar:
         buffer.seek(0)
         return buffer
 
-    # ---------------- EXPORT UI ----------------
     st.subheader("📄 Export Chat")
 
     st.download_button(
@@ -176,7 +154,6 @@ with st.sidebar:
 
     st.divider()
 
-    # ---------------- AUTO SUMMARY ----------------
     def generate_summary():
         chat = st.session_state.messages[ai_mode]
         if not chat:
@@ -212,14 +189,10 @@ with st.sidebar:
 
     st.divider()
 
-    # ---------------- CLEAR CHAT (BOTTOM) ----------------
     if st.button("🧹 Clear Chat"):
         st.session_state.messages[ai_mode] = []
         st.success("Chat cleared!")
 
-# =====================================================
-# 🔹 MAIN CHAT AREA
-# =====================================================
 for msg in st.session_state.messages[ai_mode]:
     if msg["role"] == "user":
         with st.chat_message("👩‍💻"):
@@ -227,7 +200,6 @@ for msg in st.session_state.messages[ai_mode]:
     else:
             st.write(msg["content"])
 
-# Chat input
 user_message = st.chat_input("Type your message...")
 
 if user_message:

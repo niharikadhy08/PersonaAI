@@ -5,7 +5,7 @@ It offers distinct AI personas for chatting, content creation, studying, and wri
 The project focuses on practical AI usability, clean UI design, and real-world features such as chat export, summaries, and session control.
 
 🔗 Live Demo
-👉 https://personaai-chtpem4pzfwi9ot8aif7wm.streamlit.app/
+👉 https://personaai-mhhq6b5a3cukomav8qzt4c.streamlit.app/
 
 📸 Application Preview
 Chat Mode
