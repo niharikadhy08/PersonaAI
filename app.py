@@ -33,6 +33,36 @@ if "messages" not in st.session_state:
         "✍️ Writer": []
     }
 
+# ⚠️ Add disclaimer once for every mode
+if "disclaimer_added" not in st.session_state:
+    st.session_state.disclaimer_added = True
+
+    disclaimer_text = (
+        "Hi 👋 I'm PersonaAI!\n\n"
+                "You can chat with me, create content ideas, study concepts, "
+                "or get help with writing.\n\n"
+                "✨ Choose a mode from the sidebar and start typing!"
+    )
+
+    for mode in st.session_state.messages:
+        st.session_state.messages[mode].append(
+            {"role": "assistant", "content": disclaimer_text}
+        )
+
+
+if len(st.session_state.messages["💬 Chat"]) == 0:
+    st.session_state.messages["💬 Chat"].append(
+        {
+            "role": "assistant",
+            "content": (
+                "Hi 👋 I'm PersonaAI!\n\n"
+                "You can chat with me, create content ideas, study concepts, "
+                "or get help with writing.\n\n"
+                "✨ Choose a mode from the sidebar and start typing!"
+            )
+        }
+    )
+
 
 with st.sidebar:
     st.header("🧠 AI Mode")
