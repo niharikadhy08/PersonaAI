@@ -33,7 +33,6 @@ if "messages" not in st.session_state:
         "✍️ Writer": []
     }
 
-# ⚠️ Add disclaimer once for every mode
 if "disclaimer_added" not in st.session_state:
     st.session_state.disclaimer_added = True
 
