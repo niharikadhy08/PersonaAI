@@ -54,9 +54,10 @@ if len(st.session_state.messages["💬 Chat"]) == 0:
         {
             "role": "assistant",
             "content": (
-                "Hi 👋 I'm PersonaAI!\n\n"
-                "You can chat with me, create content ideas, study concepts or get help with writing.\n\n"
-                "✨ Choose a mode from the sidebar and start typing!"
+                👋 I'm PersonaAI!\n\n"
+                    "You can chat with me, create content ideas, study concepts "
+                    "or get help with writing.\n\n"
+                    "✨ Choose a mode from the sidebar and start typing!
             )
         }
     )
