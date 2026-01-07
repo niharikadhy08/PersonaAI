@@ -25,11 +25,11 @@ Content Ideas
 
 ## Key Features
 ## Multi-Mode AI Interaction : 
-💬 Chat Mode – Friendly, casual conversations for general use
-📸 Creator Mode – Generates social media content ideas and creative suggestions
-🧠 Study Mode – Explains concepts in a simple, beginner-friendly manner
-✍️ Writer Mode – Assists with professional and structured writing
-Each mode maintains its own conversation memory, ensuring context-aware and relevant responses.
+- 💬 Chat Mode – Friendly, casual conversations for general use
+- 📸 Creator Mode – Generates social media content ideas and creative suggestions
+- 🧠 Study Mode – Explains concepts in a simple, beginner-friendly manner
+- ✍️ Writer Mode – Assists with professional and structured writing
+    - Each mode maintains its own conversation memory, ensuring context-aware and relevant responses.
 
 ## Conversation Management :
 - Export as TXT – Download chat history in text format
